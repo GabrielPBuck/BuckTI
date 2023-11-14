@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BuckTI.Models.CadClientes>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p><br /></p>
+<h1 class ="text-center">Clientes</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Nome do Cliente</label>
+               @*  @Html.DisplayNameFor(model => model.NomeCliente) *@
+            </th>
+            <th>
+                <label>Sobrenome</label>
+                @* @Html.DisplayNameFor(model => model.SobrenomeCliente) *@
+            </th>
+            <th>
+                <label>CPF</label>
+               @*  @Html.DisplayNameFor(model => model.CPFCliente) *@
+            </th>
+            <th>
+                <label>Telefone</label>
+               @*  @Html.DisplayNameFor(model => model.TelefoneCliente) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SobrenomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneCliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCliente">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCliente">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCliente">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

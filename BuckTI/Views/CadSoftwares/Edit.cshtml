@@ -1,0 +1,48 @@
+﻿@model BuckTI.Models.CadSoftwares
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Editar</h1>
+<hr />
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdSoftware" />
+            <p></p>
+            <div class="form-group">
+                <label asp-for="NomeSoftware" class="control-label"></label>
+                <input asp-for="NomeSoftware" class="form-control" />
+                <span asp-validation-for="NomeSoftware" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="VersaoSoftware" class="control-label"></label>
+                <input asp-for="VersaoSoftware" class="form-control" />
+                <span asp-validation-for="VersaoSoftware" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="ValidadeSoftware" class="control-label"></label>
+                <input asp-for="ValidadeSoftware" class="form-control" />
+                <span asp-validation-for="ValidadeSoftware" class="text-danger"></span>
+            </div>
+            <p><br /></p>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volta a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

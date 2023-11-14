@@ -1,0 +1,51 @@
+﻿@model IEnumerable<BuckTI.Models.CadSoftwares>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p><br /></p>
+<h1 class="text-center">Softwares</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Nome do Software</label>
+                @*@Html.DisplayNameFor(model => model.NomeSoftware) *@
+            </th>
+            <th>
+                <label>Versão</label>
+                @*@Html.DisplayNameFor(model => model.VersaoSoftware) *@
+            </th>
+            <th>
+                <label>Data de Validade</label>
+                @* @Html.DisplayNameFor(model => model.ValidadeSoftware) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeSoftware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VersaoSoftware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValidadeSoftware)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdSoftware">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSoftware">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSoftware">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

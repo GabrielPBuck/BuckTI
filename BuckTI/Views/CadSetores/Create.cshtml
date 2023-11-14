@@ -1,0 +1,39 @@
+﻿@model BuckTI.Models.CadSetores
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Setores</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeSetor" class="control-label">Nome do Setor</label>
+                <input asp-for="NomeSetor" class="form-control" />
+                <span asp-validation-for="NomeSetor" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="ResponsavelSetor" class="control-label">Nome do Responsável</label>
+                <input asp-for="ResponsavelSetor" class="form-control" />
+                <span asp-validation-for="ResponsavelSetor" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<p></p>
+<div class="text-center">
+    <a asp-action="Index">Voltar A Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

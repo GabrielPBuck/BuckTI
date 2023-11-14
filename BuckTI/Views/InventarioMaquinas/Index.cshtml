@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BuckTI.Models.InventarioMaquinas>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Cadastro de Máquinas</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Nova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdSoftware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdSetor)
+            </th>
+            <th>
+                <label>Tipo</label>
+               @*  @Html.DisplayNameFor(model => model.TipoMaquina) *@
+            </th>
+            <th>
+                <label>Patrimônio</label>
+                @* @Html.DisplayNameFor(model => model.NumeroMaquina) *@
+            </th>
+            <th>
+                <label>Status</label>
+                @* @Html.DisplayNameFor(model => model.StatusMaquina) *@
+            </th>
+            <th>
+                <label>Descrição</label>
+                @* @Html.DisplayNameFor(model => model.DescricaoMaquina) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSoftware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSetor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoMaquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroMaquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatusMaquina)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoMaquina)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdMaquina">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdMaquina">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdMaquina">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

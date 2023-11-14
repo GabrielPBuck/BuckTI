@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BuckTI.Models.CadSetores>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<p><br /></p>
+<h1 class="text-center">Setores</h1>
+
+<p>
+    <a asp-action="Create">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <label>Setor</label>
+                @* @Html.DisplayNameFor(model => model.NomeSetor) *@
+            </th>
+            <th>
+                Nome do Responsável
+                @* @Html.DisplayNameFor(model => model.ResponsavelSetor) *@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeSetor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResponsavelSetor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdSetor">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdSetor">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdSetor">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,84 @@
+﻿@model BuckTI.Models.InventarioMaquinasModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Inventário de Máquinas</h1>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>Nome do Cliente</label>
+                <select name="IdCliente" class="form-control">
+                    @foreach (var item in Model.ListaClientes)
+                    {
+                        <option value="@item.IdCliente">@item.NomeCliente</option>
+                    }
+                </select>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label>Nome do Software</label>
+                <select name="IdSoftware" class="form-control">
+                    @foreach (var item in Model.ListaSoftwares)
+                    {
+                        <option value="@item.IdSoftware">@item.NomeSoftware</option>
+                    }
+                </select>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label>Setor</label>
+                <select name="IdSetor" class="form-control">
+                    @foreach (var item in Model.ListaSetores)
+                    {
+                        <option value="@item.IdSetor">@item.NomeSetor</option>
+                    }
+                </select>
+            </div>
+            <p><br /></p>
+            <hr />
+            <div class="form-group">
+                <label asp-for="TipoMaquina" class="control-label">Tipo</label>
+                <input asp-for="TipoMaquina" class="form-control" />
+                <span asp-validation-for="TipoMaquina" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="NumeroMaquina" class="control-label">Patrimônio</label>
+                <input asp-for="NumeroMaquina" class="form-control" />
+                <span asp-validation-for="NumeroMaquina" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="StatusMaquina" class="control-label">Status</label>
+                <input asp-for="StatusMaquina" class="form-control" />
+                <span asp-validation-for="StatusMaquina" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <label asp-for="DescricaoMaquina" class="control-label">Descrição</label>
+                <input asp-for="DescricaoMaquina" class="form-control" />
+                <span asp-validation-for="DescricaoMaquina" class="text-danger"></span>
+            </div>
+            <p></p>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
