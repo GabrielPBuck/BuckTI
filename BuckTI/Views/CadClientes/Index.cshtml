@@ -4,29 +4,32 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<p><br /></p>
-<h1 class ="text-center">Clientes</h1>
 
-<p>
+<p><br /></p>
+
+<p class="bg-titulosmenucad">
     <a asp-action="Create">Cadastrar Novo</a>
 </p>
+
+<h1 class ="text-center bg-titulosmenu">Clientes</h1>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                <label>Nome do Cliente</label>
+                <label class="text-white-50">Nome do Cliente</label>
                @*  @Html.DisplayNameFor(model => model.NomeCliente) *@
             </th>
             <th>
-                <label>Sobrenome</label>
+                <label class="text-white-50">Sobrenome</label>
                 @* @Html.DisplayNameFor(model => model.SobrenomeCliente) *@
             </th>
             <th>
-                <label>CPF</label>
+                <label class="text-white-50">CPF</label>
                @*  @Html.DisplayNameFor(model => model.CPFCliente) *@
             </th>
             <th>
-                <label>Telefone</label>
+                <label class="text-white-50">Telefone</label>
                @*  @Html.DisplayNameFor(model => model.TelefoneCliente) *@
             </th>
             <th></th>

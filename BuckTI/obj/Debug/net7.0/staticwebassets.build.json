@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pLtlXUR2cvSHFplecQB0jOPRPapJ/p9/4X06TUPY/E4=",
+  "Hash": "mSC07saPNwRm8w5mJH0H4waxGvVg2jMdyEI6nLp5baI=",
   "Source": "BuckTI",
   "BasePath": "_content/BuckTI",
   "Mode": "Default",
@@ -695,6 +695,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Identity": "W:\\users\\gabriel.pbuck\\source\\repos\\BuckTI\\BuckTI\\wwwroot\\lib\\bootstrap\\dist\\css\\slate.css",
+      "SourceId": "BuckTI",
+      "SourceType": "Discovered",
+      "ContentRoot": "W:\\users\\gabriel.pbuck\\source\\repos\\BuckTI\\BuckTI\\wwwroot\\",
+      "BasePath": "_content/BuckTI",
+      "RelativePath": "lib/bootstrap/dist/css/slate.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\slate.css"
     },
     {
       "Identity": "W:\\users\\gabriel.pbuck\\source\\repos\\BuckTI\\BuckTI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",

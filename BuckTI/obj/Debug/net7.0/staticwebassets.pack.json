@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+      "Id": "W:\\users\\gabriel.pbuck\\source\\repos\\BuckTI\\BuckTI\\wwwroot\\lib\\bootstrap\\dist\\css\\slate.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\slate.css"
+    },
+    {
       "Id": "W:\\users\\gabriel.pbuck\\source\\repos\\BuckTI\\BuckTI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },

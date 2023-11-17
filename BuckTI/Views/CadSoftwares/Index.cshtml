@@ -5,24 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <p><br /></p>
-<h1 class="text-center">Softwares</h1>
 
-<p>
+<p class="bg-titulosmenucad">
     <a asp-action="Create">Cadastrar Novo</a>
 </p>
+
+<h1 class="text-center bg-titulosmenu">Softwares</h1>
 <table class="table">
     <thead>
         <tr>
             <th>
-                <label>Nome do Software</label>
+                <label class="text-white-50">Nome do Software</label>
                 @*@Html.DisplayNameFor(model => model.NomeSoftware) *@
             </th>
             <th>
-                <label>Versão</label>
+                <label class="text-white-50">Versão</label>
                 @*@Html.DisplayNameFor(model => model.VersaoSoftware) *@
             </th>
             <th>
-                <label>Data de Validade</label>
+                <label class="text-white-50">Data de Validade</label>
                 @* @Html.DisplayNameFor(model => model.ValidadeSoftware) *@
             </th>
             <th></th>
